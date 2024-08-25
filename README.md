@@ -1,3 +1,3 @@
 # oop
 
-[![Build status](https://ci.appveyor.com/api/projects/status/j2oweb7m6iiu49sl?svg=true)](https://ci.appveyor.com/project/pugachevnv/ajs-test-ci)
+[![Build status](https://ci.appveyor.com/api/projects/status/ai93ytms0ynp1hd9?svg=true)](https://ci.appveyor.com/project/pugachevnv/ajs-oop-classes)

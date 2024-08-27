@@ -9,12 +9,16 @@ export default class Character {
             'Zombie'
         ];
         
-        if (name !== 'string' && name.length < 2 && name.length > 10) {  
-            throw new Error("не менее 2 и не более 10 символов");
+        if (typeof name !== 'string') {  
+            throw new Error('Имя персонажа должно быть строкой');
+        }
+
+        if (name.length < 2 || name.length > 10) {  
+            throw new Error('Имя персонажа должно быть не менее 2 и не более 10 символов');
         }
                 
         if (!types.includes(type)) {
-            throw new Error('перcонажа нет в списке'); 
+            throw new Error('Такого перcонажа нет в списке'); 
         }
                     
         this.type = type;

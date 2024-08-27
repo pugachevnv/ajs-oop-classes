@@ -13,10 +13,18 @@ test('Правильно создается объект', () => {
     expect(warrior).toEqual(correct);
 });
 
-test('Ошибка в name', () => {
-    expect(() => new Character('A', 'Bowman')).toThrow("не менее 2 и не более 10 символов");
+test('Ошибка в name, не является строкой', () => {
+    expect(() => new Character(123, 'Bowman')).toThrow('Имя персонажа должно быть строкой');
+});
+
+test('Ошибка в name, менее 2 сиволов', () => {
+    expect(() => new Character('A', 'Bowman')).toThrow('Имя персонажа должно быть не менее 2 и не более 10 символов');
+});
+
+test('Ошибка в name, более 10 символов', () => {
+    expect(() => new Character('VeryLongName', 'Bowman')).toThrow('Имя персонажа должно быть не менее 2 и не более 10 символов');
 });
 
 test('Ошибка в type', () => {
-    expect(() => new Character('Alex', 'Bow')).toThrow('перcонажа нет в списке');
+    expect(() => new Character('Alex', 'Bow')).toThrow('Такого перcонажа нет в списке');
 });
